@@ -15,14 +15,11 @@
 
     <!-- JS  -->
     <script type="text/javascript" src="main.js"></script>
-
+    
     <title>Tienda Piedras</title>
 </head>
-
 <body>
-
     <h1>Bienvenidos a nuestra tienda de piedras!</h1>
-
     <div class="container-fluid">
 
         <div class="row">
@@ -32,33 +29,33 @@
                         <div class="col">
                             <div class="card" style="width: 18rem;">
                                 <img src="./images/Iron_Ore.png" id="Iron_Ore" alt="">
-                                <div class="card-body">
+                                <div draggable="true" class="card-body">
                                     <h5 class="card-title">Card title</h5>
                                     <p class="card-text">Some quick example text to build on the card title and make up
                                         the bulk of the card's content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    <a href="#" class="btn btn-primary">Añadir al carrito</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col">
                             <div class="card" style="width: 18rem;">
-                                <img src="./images/Gold_Ore.png" id="Gold_Ore" alt="">
+                                <img draggable="true" src="./images/Gold_Ore.png" id="Gold_Ore" alt="">
                                 <div class="card-body">
                                     <h5 class="card-title">Card title</h5>
                                     <p class="card-text">Some quick example text to build on the card title and make up
                                         the bulk of the card's content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    <a href="#" class="btn btn-primary">Añadir al carrito</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col">
                             <div class="card" style="width: 18rem;">
-                                <img src="./images/Emerald_Ore.png" id="Emerald_Ore" alt="">
+                                <img draggable="true" src="./images/Emerald_Ore.png" id="Emerald_Ore" alt="">
                                 <div class="card-body">
                                     <h5 class="card-title">Card title</h5>
                                     <p class="card-text">Some quick example text to build on the card title and make up
                                         the bulk of the card's content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    <a href="#" class="btn btn-primary">Añadir al carrito</a>
                                 </div>
                             </div>
                         </div>
@@ -66,34 +63,34 @@
                     <div class="row">
                         <div class="col">
                             <div class="card" style="width: 18rem;">
-                                <img src="./images/Lapis_Lazuli_Ore.png" id="Lapis_Lazuli_Ore" alt="">
+                                <img draggable="true" src="./images/Lapis_Lazuli_Ore.png" id="Lapis_Lazuli_Ore" alt="">
                                 <div class="card-body">
                                     <h5 class="card-title">Card title</h5>
                                     <p class="card-text">Some quick example text to build on the card title and make up
                                         the bulk of the card's content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    <a href="#" class="btn btn-primary">Añadir al carrito</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col">
                             <div class="card" style="width: 18rem;">
-                                <img src="./images/Diamond_Ore.png" id="Diamond_Ore" alt="">
+                                <img  draggable="true" src="./images/Diamond_Ore.png" id="Diamond_Ore" alt="">
                                 <div class="card-body">
                                     <h5 class="card-title">Card title</h5>
                                     <p class="card-text">Some quick example text to build on the card title and make up
                                         the bulk of the card's content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    <a href="#" class="btn btn-primary">Añadir al carrito</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col">
                             <div class="card" style="width: 18rem;">
-                                <img src="./images/Nether_Quartz_Ore.png" alt="" id="Nether_Quartz_Ore">
+                                <img src="./images/Nether_Quartz_Ore.png" draggable="true" alt="" id="Nether_Quartz_Ore">
                                 <div class="card-body">
                                     <h5 class="card-title">Card title</h5>
                                     <p class="card-text">Some quick example text to build on the card title and make up
                                         the bulk of the card's content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    <a href="#" class="btn btn-primary">Añadir al carrito</a>
                                 </div>
                             </div>
                         </div>
@@ -102,10 +99,10 @@
             </div>
             <div class="col-xl-3">
                 <div class="row" id="Villager">
-                    <img src="./images/Villager.png">
+                    <img src="./images/Villager.png" ondrop="drop(event)" ondragover="allowDrop(event)">
                 </div>
-                <div class="row" id="carrito">
-                    <table>
+                <div class="row">
+                    <table id="carrito">
                         <tr>
                             <th>Cantidad</th>
                             <th>Producto</th>
@@ -120,5 +117,4 @@
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
         crossorigin="anonymous"></script>
 </body>
-
 </html>
