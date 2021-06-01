@@ -17,12 +17,13 @@ function drop(ev) {
 }
 
 
-var lista = [];       //Lista de productos   
-var cantidad = [];    //Cantidad de cada producto
+var lista = ['Iron_Ore', 'Gold_Ore', 'Emerald_Ore', 'Lapis_Lazuli_Ore', 'Diamond_Ore', 'Nether_Quartz_Ore'];       //Lista de productos   
+var cantidad = ['0','0','0','0','0','0'];    //Cantidad de cada producto
 
 //Comprueba si el producto ya se ha seleccionado anteriormente
 function checkProduct(data) {
-    if (lista.indexOf(data) == -1) {
+
+    if (cantidad[lista.indexOf(data)] == 0) {
         myCreateFunction(data);
     }
     else {
@@ -34,27 +35,39 @@ function checkProduct(data) {
 function myCreateFunction(ore) {
     let table = document.getElementById("carrito");
     let row = table.insertRow(-1);
+    row.id='row_'+ore;
     let cell1 = row.insertCell(0);
     let cell2 = row.insertCell(1);
-    lista.push(ore)
-    cantidad.push(1);
+    let cell3 = row.insertCell(2);
+    cantidad[lista.indexOf(ore)] += 1;
     cell1.innerHTML = ore;
     cell2.innerHTML = '<input type="number" id=input_' + ore + ' value="1" disabled></input>';
+    cell3.innerHTML = '<button class="btn btn-danger" id="delete_' + ore + '">borrar</button>';
+    document.getElementById("delete_" + ore).addEventListener("click", function () { deleteProduct(ore); });
 }
 
 //Si el producto ya se ha seleccionado anteriormente, suma 1 al valor de su input
 function addItem(ore) {
-    let input = document.getElementById("input_" + ore);
-    let aux = parseInt(input.value);
-    input.value = ++aux;
-    cantidad[lista.indexOf(ore)] += 1;
-    console.log(cantidad);
+
+        let input = document.getElementById("input_" + ore);
+        let aux = parseInt(input.value);
+        input.value = ++aux;
+        cantidad[lista.indexOf(ore)] += 1;
 }
 
-console.log(lista);
-console.log(cantidad);
-//   var prueba=document.getElementById("add_Iron");
-//   prueba.addEventListener("click", checkProduct("Iron_Ore"));
+function deleteProduct(ore) {
+    console.log(ore);
+    let table = document.getElementById("carrito");
+    // let row = table.deleteRow(lista.indexOf(ore)+1);
+    let row=document.getElementById("row_"+ore);
+    console.log(row);
+    table.deleteRow(row);
+    let input = document.getElementById("input_" + ore);
+    cantidad[lista.indexOf(ore)] = 0;
+
+}
+
+//Botones para añadir al carrito
 document.getElementById("add_Iron").addEventListener("click", function () { checkProduct("Iron_Ore"); });
 document.getElementById("add_Gold").addEventListener("click", function () { checkProduct("Gold_Ore"); });
 document.getElementById("add_Emerald").addEventListener("click", function () { checkProduct("Emerald_Ore"); });
@@ -97,9 +110,9 @@ function totalPrice() {
         }
     });
     let table = document.getElementById("carrito");
-    table.innerHTML="<tr><th>Producto</th><th>Cantidad</th></tr>";
-    lista=[];
-    cantidad=[];
-    return(price);
+    table.innerHTML = "<tr><th>Producto</th><th>Cantidad</th><th></th></tr>";
+    lista = [];
+    cantidad = [];
+    return (price);
 }
 
