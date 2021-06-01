@@ -39,7 +39,7 @@ function myCreateFunction(ore) {
     lista.push(ore)
     cantidad.push(1);
     cell1.innerHTML = ore;
-    cell2.innerHTML = '<input type="number" id=input_' + ore + ' value="1"></input>';
+    cell2.innerHTML = '<input type="number" id=input_' + ore + ' value="1" disabled></input>';
 }
 
 //Si el producto ya se ha seleccionado anteriormente, suma 1 al valor de su input
