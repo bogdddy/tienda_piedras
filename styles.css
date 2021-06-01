@@ -1,0 +1,6 @@
+@media (min-width: 900px){
+    .tabla{
+        display: flex;
+        flex-direction: row;
+    }
+}

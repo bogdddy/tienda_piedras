@@ -17,7 +17,7 @@ function drop(ev) {
 }
 
 
-var lista=[];       //Lista de productos   
+ var lista=[];       //Lista de productos   
 var cantidad=[];    //Cantidad de cada producto
 
 //Comprueba si el producto ya se ha seleccionado anteriormente
@@ -51,7 +51,16 @@ function myCreateFunction(ore) {
     console.log(cantidad);
   }
 
-  
-   document.getElementById("add_Iron").addEventListener("click", checkProduct("Iron_Ore"));
+  console.log(lista);
+  console.log(cantidad);
+//   var prueba=document.getElementById("add_Iron");
+//   prueba.addEventListener("click", checkProduct("Iron_Ore"));
+document.getElementById("add_Iron").addEventListener("click", function(){checkProduct("Iron_Ore");})
+document.getElementById("add_Gold").addEventListener("click", function(){checkProduct("Gold_Ore");})
+document.getElementById("add_Emerald").addEventListener("click", function(){checkProduct("Emerald_Ore");})
+document.getElementById("add_Lapis_Lazuli").addEventListener("click", function(){checkProduct("Lapis_Lazuli_Ore");})
+document.getElementById("add_Diamond").addEventListener("click", function(){checkProduct("Diamond_Ore");})
+document.getElementById("add_Nether_Quartz").addEventListener("click", function(){checkProduct("Nether_Quartz_Ore");})
+
 
 
