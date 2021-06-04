@@ -7,114 +7,141 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- own CSS  -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./resources/styles.css">
 
     <!-- Bootstrap  -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
-    <!-- JS  -->
-    <script type="text/javascript" src="main.js"></script>
-    
+
+
     <title>Tienda Piedras</title>
 </head>
-<body>
-    <h1>Bienvenidos a nuestra tienda de piedras!</h1>
-    <div class="container-fluid">
 
+<body>
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-xl-9 col-md-12 expositor">
+            <div class="col-xl-8 ">
+                
+                <!-- productos  -->
                 <div class="container-fluid">
-                    <div class="row">
-                        <div class="col">
+                    <div class="row mt-3">
+                        <h1 class="text-white text-center">Se venden piedras!</h1>
+                        <div class="col-md-4 d-flex justify-content-center">
                             <div class="card" style="width: 18rem;">
-                                <img src="./images/Iron_Ore.png" id="Iron_Ore" alt="">
+                                <img src="./resources/images/Iron_Ore.png" id="Iron_Ore" draggable="true"
+                                    ondragstart="drag(event)">
                                 <div draggable="true" class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up
-                                        the bulk of the card's content.</p>
-                                    <a href="#" class="btn btn-primary">Añadir al carrito</a>
+                                    <h5 class="card-title">Iron Ore</h5>
+                                    <p class="card-text">
+                                        Price : 20 emerald.
+                                    </p>
+                                    <a id="add_Iron" href="#" class="btn btn-primary">Añadir al carrito</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col">
+                        <div class="col-md-4 d-flex justify-content-center">
                             <div class="card" style="width: 18rem;">
-                                <img draggable="true" src="./images/Gold_Ore.png" id="Gold_Ore" alt="">
+                                <img draggable="true" src="./resources/images/Gold_Ore.png" id="Gold_Ore"
+                                    draggable="true" ondragstart="drag(event)">
                                 <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up
-                                        the bulk of the card's content.</p>
-                                    <a href="#" class="btn btn-primary">Añadir al carrito</a>
+                                    <h5 class="card-title">Gold Ore</h5>
+                                    <p class="card-text">
+                                        Price : 50 emerald.
+                                    </p>
+                                    <a id="add_Gold" href="#" class="btn btn-primary">Añadir al carrito</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col">
+                        <div class="col-md-4 d-flex justify-content-center">
                             <div class="card" style="width: 18rem;">
-                                <img draggable="true" src="./images/Emerald_Ore.png" id="Emerald_Ore" alt="">
+                                <img draggable="true" src="./resources/images/Emerald_Ore.png" id="Emerald_Ore"
+                                    draggable="true" ondragstart="drag(event)">
                                 <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up
-                                        the bulk of the card's content.</p>
-                                    <a href="#" class="btn btn-primary">Añadir al carrito</a>
+                                    <h5 class="card-title">Emerald Ore</h5>
+                                    <p class="card-text">
+                                        Price : 100 emerald.
+                                    </p>
+                                    <a id="add_Emerald" href="#" class="btn btn-primary">Añadir al carrito</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col">
+                    <div class="row mt-3">
+                        <div class="col-md-4 d-flex justify-content-center">
                             <div class="card" style="width: 18rem;">
-                                <img draggable="true" src="./images/Lapis_Lazuli_Ore.png" id="Lapis_Lazuli_Ore" alt="">
+                                <img draggable="true" src="./resources/images/Lapis_Lazuli_Ore.png"
+                                    id="Lapis_Lazuli_Ore" draggable="true" ondragstart="drag(event)">
                                 <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up
-                                        the bulk of the card's content.</p>
-                                    <a href="#" class="btn btn-primary">Añadir al carrito</a>
+                                    <h5 class="card-title">Lapis Lazuli Ore</h5>
+                                    <p class="card-text">
+                                        Price : 80 emerald.
+                                    </p>
+                                    <a id="add_Lapis_Lazuli" href="#" class="btn btn-primary">Añadir al carrito</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col">
+                        <div class="col-md-4 d-flex justify-content-center">
                             <div class="card" style="width: 18rem;">
-                                <img  draggable="true" src="./images/Diamond_Ore.png" id="Diamond_Ore" alt="">
+                                <img draggable="true" src="./resources/images/Diamond_Ore.png" id="Diamond_Ore"
+                                    draggable="true" ondragstart="drag(event)">
                                 <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up
-                                        the bulk of the card's content.</p>
-                                    <a href="#" class="btn btn-primary">Añadir al carrito</a>
+                                    <h5 class="card-title">Diamond Ore</h5>
+                                    <p class="card-text">
+                                        Price : 1k emerald.
+                                    </p>
+                                    <a id="add_Diamond" href="#" class="btn btn-primary">Añadir al carrito</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col">
+                        <div class="col-md-4 d-flex justify-content-center">
                             <div class="card" style="width: 18rem;">
-                                <img src="./images/Nether_Quartz_Ore.png" draggable="true" alt="" id="Nether_Quartz_Ore">
+                                <img src="./resources/images/Nether_Quartz_Ore.png" id="Nether_Quartz_Ore"
+                                    draggable="true" ondragstart="drag(event)">
                                 <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up
-                                        the bulk of the card's content.</p>
-                                    <a href="#" class="btn btn-primary">Añadir al carrito</a>
+                                    <h5 class="card-title">Quartz Ore</h5>
+                                    <p class="card-text">
+                                        Price : 500 emerald.
+                                    </p>
+                                    <a id="add_Nether_Quartz" href="#" class="btn btn-primary">Añadir al carrito</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-xl-3">
-                <div class="row" id="Villager">
-                    <img src="./images/Villager.png" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+            <!-- zona derecha  -->
+            <div class="col-xl-4 gap-5 mt-5" id="aldeano">
+                <div class=" d-flex flex-column mx-auto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <h5 class="text-white text-center">Arrastra tus items al aldeano</h5>
+
+                    <div class="mx-auto">
+                        <img src="./resources/images/villager.png" class="villager">
+                    </div>
+                    <div class="d-flex mx-auto algin-self-end">
+                        <button class="btn btn-success d-flex align-self-end" id="checkout">Finalizar Compra</button>
+                    </div>
                 </div>
-                <div class="row">
-                    <table id="carrito">
-                        <tr>
-                            <th>Cantidad</th>
-                            <th>Producto</th>
-                        </tr>
-                    </table>
-                </div>
+                <table id="carrito" class="pt-3 mx-auto mt-5">
+                    <tr>
+                        <th>Producto</th>
+                        <th>Cantidad</th>
+                        <th></th>
+                    </tr>
+                </table>
+
             </div>
         </div>
     </div>
+
+    <!-- JS  -->
+    <script type="text/javascript" src="/resources/main.js"></script>
     <!-- bootstrap JS  -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
         crossorigin="anonymous"></script>
+
 </body>
+
 </html>

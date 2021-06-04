@@ -1,0 +1,41 @@
+/* ajustar el responsive de la zona de compra  */
+@media (max-width: 1200px){
+    #aldeano{
+        display: flex;
+        flex-direction: row;
+        padding-top: 2em;
+    }
+
+}
+
+@media (max-width: 770px){
+    #aldeano{
+        display: flex;
+        flex-direction: column;
+        padding-top: 2em;
+    }
+
+}
+
+#checkout{
+    height: min-content;
+}
+
+body{
+    background-image: url(./images/village.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#carrito{
+    color: white;
+
+}
+
+.villager {
+    max-width: 150px;
+}
+
+input{
+    background-color: white;
+}
