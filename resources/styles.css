@@ -23,6 +23,8 @@
 
 body{
     background-image: url(./images/village.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #carrito{
@@ -34,3 +36,6 @@ body{
     max-width: 150px;
 }
 
+input{
+    background-color: white;
+}
